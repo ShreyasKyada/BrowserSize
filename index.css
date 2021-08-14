@@ -1,0 +1,100 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.div-hw {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.height-width {
+    font-size: calc( 10px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label, input {
+    font-size: 25px;
+    margin: 8px;
+}
+
+input {
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(236, 230, 230);
+    color: black;
+    padding-left: 5px;
+}
+
+button {
+    font-size: 33px;
+    padding: 5px 45px;
+    margin: 20px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#grid-div {
+    display: inline-grid;
+    width: 60vw;
+    padding: 20px;
+    padding-top: 0px;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-item {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    font-size: calc( 15px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    text-align: center;
+    background-color: #29323c00;
+}
+
+body {
+    background-image: linear-gradient(to left, #485563, #29323c);
+    /* height: 92vh; */
+}
+
+.grid-item:hover {
+    background-color: #29323c;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: #29323c;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:500px) {
+    .div-hw {
+        flex-direction: column;
+        align-items: center;
+    }
+    .div-hw button {
+        padding: 5px 20px;
+        margin: 20px 10px;
+    }
+    input {
+        width: 40%;
+    }
+    .grid-item {
+        grid-column: 1 / span 3;
+        margin: 10px;
+        padding: 5px;
+    }
+}
